@@ -51,9 +51,9 @@ output DP-7 resolution 1920x1080 position 5760,0 transform 90
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 $lock \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep $lock
+         timeout 200 '$lock' \
+         timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep '$lock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
