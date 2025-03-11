@@ -1,0 +1,8 @@
+
+{
+    "Log Function": {
+    	"prefix": "logInfo",
+   	"body": [ "logInfo(\"%s |8D|\", __func__);"],
+	"description": "Inserts printf with __func__"
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "position": "top",
+  "modules-left": ["custom/launcher"],
+  "modules-center": ["sway/workspaces"],
+  "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock", "custom/power"],
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>  </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
+    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "<span size='13000' foreground='#f5e0dc'> </span>",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  },
+  "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol"
+  },
+  "custom/power": {
+	"format": "⏻",
+        "on-click": "/home/$USER/.config/waybar/scripts/power.sh"
+  },
+  "custom/launcher": {
+        "format":"<span size='13000'>\uebc6</span>",
+        "on-click": "exec nwg-drawer",
+        "tooltip": false
+  },
+  "bluetooth": {
+    "format": "{icon}",
+    "format-icons": {
+        "enabled": "",  // Bluetooth icon when enabled
+        "disabled": "󰂲"  // Bluetooth icon when disabled
+    }
+  }
+}
