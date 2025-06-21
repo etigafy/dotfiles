@@ -38,7 +38,7 @@ return {
 	    },
             color_overrides = {
         	all = {
-			base = "#262A33"
+			base = "#262626"
             --	text = "#ffffff",
         	},
         	latte = {
