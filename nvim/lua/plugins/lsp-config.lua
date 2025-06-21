@@ -20,7 +20,14 @@ return {
 
 	local lspconfig = require("lspconfig")
 --	lspconfig.lua_ls.setup({capabilities = capabilities})
-	lspconfig.clangd.setup({capabilities = capabilities})
+	--lspconfig.clangd.setup({capabilities = capabilities})
+
+	lspconfig.clangd.setup({
+  		cmd = { "clangd", "--background-index", "--clang-tidy", "--header-insertion=never" },
+  		capabilities = require('cmp_nvim_lsp').default_capabilities()
+	})
+
+
 	vim.diagnostic.config({
   		virtual_text = false
 	})

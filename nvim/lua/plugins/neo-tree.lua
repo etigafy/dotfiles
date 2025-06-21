@@ -5,9 +5,10 @@ return {
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
-  config = function()
-    vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {noremap=true, silent=true})
-    -- vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', {noremap=true, silent=true})
+   config = function()
+   vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {noremap=true, silent=true})
+   vim.keymap.set('n', '<C-d>', ':Neotree close<CR>', {noremap=true, silent=true})
+   --vim.keymap.set('n', '<C-N>', ':Neotree toggle<CR>', {noremap=true, silent=true})
     local config = require("neo-tree").setup({
 	    filesystem = {
     	filtered_items = {

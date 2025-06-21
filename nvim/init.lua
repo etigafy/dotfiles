@@ -24,13 +24,21 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("vim-options")
-require("lazy").setup("plugins")
-
+-- Set textwidth and colorcolumn for Git commit messages
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "gitcommit",
   callback = function()
-    vim.opt_local.textwidth = 72
-    vim.opt_local.formatoptions:append("t")
-  end,
+    vim.bo.textwidth = 72         -- Set textwidth to 72 characters
+  end
 })
+
+vim.opt.list = true
+--vim.opt.listchars:append("trail:·")
+vim.opt.listchars = {
+	tab = '> ',
+	trail = '·',
+}
+
+require("vim-options")
+require("lazy").setup("plugins")
+

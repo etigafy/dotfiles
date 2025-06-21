@@ -1,8 +1,47 @@
 
 {
-    "Log Function": {
-    	"prefix": "logInfo",
-   	"body": [ "logInfo(\"%s |8D|\", __func__);"],
-	"description": "Inserts printf with __func__"
-    }
+	"Log Function": {
+		"prefix": "loginfo",
+		"body": [ "logInfo(\"%s |8D| $1\", __func__);$0"],
+		"description": "Inserts printf with __func__"
+	},
+
+	"Doxygen Function Body" : {
+		"prefix": "doxfun",
+		"body": ["/**
+ * foo_bar
+ * @brief This function is used to differentiate foo from bar.
+ *
+ * It could have some additional information here. If the function is
+ * really complicated, it may need this long description as opposed to the
+ * brief one above.
+ *
+ * @param some      used for calculation of some stuff
+ * @param thing     may be either a real thing or not
+ * @param len       describes the length of something
+ *
+ * @return some really difficult things
+ */" ],
+		"description" : "Insert Doxygen Function Body"
+	},
+
+	"Doxygen Variable" : {
+		"prefix": "doxvar",
+		"body": ["/**< $1 */$0" ],
+		"description" : "Insert Doxygen variable description"
+	},
+
+	"Doxygen Oneline Comment" : {
+		"prefix": "doxone",
+		"body": ["/// $1" ],
+		"description" : "Insert Doxygen oneline comment"
+	},
+
+	"Doxygen Multiline Comment" : {
+		"prefix": "doxmulti",
+		"body": ["/** $1
+ *
+ * /$0" ],
+		"description" : "Insert Doxygen multiline comment"
+	}
 }
