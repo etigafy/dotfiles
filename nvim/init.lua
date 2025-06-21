@@ -32,6 +32,8 @@ vim.api.nvim_create_autocmd("FileType", {
   end
 })
 
+vim.opt.mouse = "a"
+
 vim.opt.list = true
 --vim.opt.listchars:append("trail:·")
 vim.opt.listchars = {
