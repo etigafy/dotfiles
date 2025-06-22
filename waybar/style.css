@@ -208,7 +208,7 @@ window#waybar.empty #window {
 }
 
 #temperature {
-    color: @teal;
+    color: @yellow;
     /* border-bottom: 2px solid @teal; */
     border-radius: 10px 0 0 10px;
 }
@@ -219,13 +219,13 @@ window#waybar.empty #window {
 }
 
 #custom-system {
-    color: @sky;
+    color: @lavender;
     /* border-bottom: 2px solid @sky; */
     border-radius: 0 0 0 0;
 }
 
 #cpu {
-    color: @sky;
+    color: @lavender;
     /* border-bottom: 2px solid @sky; */
     border-radius: 0 0 0 0;
 }

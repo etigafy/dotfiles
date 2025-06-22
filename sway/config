@@ -14,22 +14,24 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty -e tmux
+set $term kitty -e tmux
 set $browser brave-browser
 # Your preferred application launcher
 #set $menu wmenu-run
-#set $menu wofi --show drun
+set $menu wofi --show drun
 set $rofi_cmd rofi \
         -terminal '$term'
-set $menu $rofi_cmd -show drun -replace
+#set $menu $rofi_cmd -show drun -replace
 
 set $fileManager nautilus
 
 set $lock hyprlock --config ~/.config/hyprlock/hyprlock.conf
 
+for_window [app_id="Alacritty"] opacity 0.9
+for_window [app_id="kitty"] opacity 0.9
+
 ## ADD clipboard
 exec_always wl-paste -t text --watch clipman store --no-persist
-
 # Window borders
 default_border pixel 4
 
@@ -171,6 +173,9 @@ exec swayidle -w \
 #
 # Workspaces:
 #
+    # Focus next container (clockwise)
+    bindsym $mod+Tab workspace next
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
