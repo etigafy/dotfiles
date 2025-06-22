@@ -58,17 +58,14 @@ set $output-laptop eDP-1
 set $output-screen DP-6
 set $output-90 DP-7
 
-workspace 1 output $output-laptop
-workspace 2 output $DP-6
-workspace 3 output $DP-7
+bindswitch --reload --locked lid:on output $output-laptop disable
+bindswitch --reload --locked lid:off output $output-laptop enable
 
-workspace 4 output $output-laptop
-workspace 5 output $DP-6
-workspace 6 output $DP-7
+workspace 1 output eDP-1
+workspace 2 output DP-6
+workspace 3 output DP-7
 
-workspace 7 output $output-laptop
-workspace 8 output $DP-6
-workspace 9 output $DP-7
+for_window [app_id="blueman-applet"] move to scratchpad
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
