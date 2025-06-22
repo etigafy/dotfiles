@@ -1,26 +1,24 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
+  "output": "!DP-7",
   "height": 30,
   "margin": "0 0 0 0",
-  //"width": 1350, // Waybar width
-  // Choose the order of the modules idle_inhibitor
   "modules-left": [
     "custom/launcher",
     "sway/workspaces",
-    "tray",
-    "sway/mode",
-    "custom/cava-internal",
     "mpd#2",
     "mpd#3",
     "mpd#4",
-    "mpd"
+    "mpd",
+    "sway/scratchpad",
+    "custom/spotify"
   ],
   "modules-center": ["clock"],
   "modules-right": [
     "backlight",
     "pulseaudio",
-    "custom/keyboard-layout",
+    "bluetooth",
     "temperature",
     // "cpu",
     // "memory",
@@ -32,10 +30,10 @@
     "custom/power"
   ],
 
-
     // Load Modules
     "include": ["~/.config/waybar/modules.json"],
 
   // Modules configuration
 
 }
+

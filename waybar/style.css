@@ -84,6 +84,8 @@ window#waybar {
     color: #ebcb8b;
 }
 
+#scratchpad,
+#custom-spotify,
 #clock,
 #custom-swap,
 #custom-cava-internal,
@@ -97,6 +99,7 @@ window#waybar {
 #backlight,
 #network,
 #pulseaudio,
+#bluetooth,
 #mode,
 #window,
 #tray,
@@ -200,6 +203,14 @@ window#waybar.empty #window {
     /* border-bottom: 2px solid #3b4252; */
 }
 
+
+#bluetooth {
+    color: @blue;
+    /* border-bottom: 2px solid @flamingo; */
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+
 #custom-keyboard-layout {
     color: @peach;
     /* border-bottom: 2px solid @peach; */
@@ -231,17 +242,17 @@ window#waybar.empty #window {
 }
 
 #cpu #cpu-icon {
-    color: @sky;
+    color: @lavender;
     border-radius: 0 0 0 0;
 }
 
 #memory {
-    color: @sky;
+    color: @lavender;
     border-radius: 0 0 0 0;
 }
 
 #disk {
-    color: @sky;
+    color: @lavender;
     border-radius: 0 0 0 0;
 }
 
@@ -315,6 +326,22 @@ window#waybar.empty #window {
 
 #custom-launcher {
     background-color: @mauve;
+    color: @base;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+#scratchpad {
+    background-color: @orange;
+    color: @lavender;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+#custom-spotify {
+    background-color: @green;
     color: @base;
     border-radius: 10px;
     padding: 5px 10px;
