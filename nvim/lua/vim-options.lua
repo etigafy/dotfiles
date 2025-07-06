@@ -4,21 +4,21 @@ vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "c",
-  callback = function()
-    vim.opt_local.tabstop = 8
-    vim.opt_local.shiftwidth = 8
-    vim.opt_local.expandtab = false
-  end,
+	pattern = "c",
+	callback = function()
+		vim.opt_local.tabstop = 8
+		vim.opt_local.shiftwidth = 8
+		vim.opt_local.expandtab = false
+	end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "dts", "dtsi" },
-  callback = function()
-    vim.opt_local.tabstop = 8
-    vim.opt_local.shiftwidth = 8
-    vim.opt_local.expandtab = false
-  end,
+	pattern = { "dts", "dtsi" },
+	callback = function()
+		vim.opt_local.tabstop = 8
+		vim.opt_local.shiftwidth = 8
+		vim.opt_local.expandtab = false
+	end,
 })
 
 
