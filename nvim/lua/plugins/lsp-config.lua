@@ -27,6 +27,11 @@ return {
   		capabilities = require('cmp_nvim_lsp').default_capabilities()
 	})
 
+	lspconfig.bashls.setup({
+		cmd = { "bash-language-server", "start" },
+		filetypes = { 'bash', 'sh' }
+	})
+
 
 	vim.diagnostic.config({
   		virtual_text = false
@@ -34,8 +39,8 @@ return {
 --	lspconfig.markdown_oxide.setup({capabilities = capabilities})
 	vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {noremap=true, silent=true})
 	vim.keymap.set('n', 'K', vim.lsp.buf.hover, {noremap=true, silent=true})
-	vim.keymap.set('n', 'j', vim.lsp.buf.definition, {noremap=true, silent=true})
-	vim.keymap.set('n', 'b', '<C-o>', { noremap = true, silent = true })		
+	vim.keymap.set('n', '<leader>j', vim.lsp.buf.definition, {noremap=true, silent=true})
+	vim.keymap.set('n', '<leader>b', '<C-o>', { noremap = true, silent = true })
 	vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {noremap=true, silent=true})
     end
   }

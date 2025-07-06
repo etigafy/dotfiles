@@ -1,6 +1,3 @@
-vim.opt.clipboard:append("unnamedplus")
-vim.opt.number = true
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -24,7 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Set textwidth and colorcolumn for Git commit messages
+vim.opt.clipboard:append("unnamedplus")
+
+	-- Set textwidth and colorcolumn for Git commit messages
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "gitcommit",
   callback = function()
@@ -40,6 +39,11 @@ vim.opt.listchars = {
 	tab = '> ',
 	trail = '·',
 }
+
+vim.opt.relativenumber = true
+vim.opt.cursorline = true       -- Highlight the current line
+vim.opt.cursorlineopt = "number"
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#3EFC14", bold = true })
 
 require("vim-options")
 require("lazy").setup("plugins")
