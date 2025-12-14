@@ -20,21 +20,14 @@
     "pulseaudio",
     "bluetooth",
     "temperature",
-    // "cpu",
-    // "memory",
-    // "disk",
     "group/hardware",
     "battery",
     "network",
-	"custom/notification",
-    // "idle_inhibitor",
+    "custom/notification",
     "custom/power"
   ],
 
     // Load Modules
     "include": ["~/.config/waybar/modules.json"],
-
-  // Modules configuration
-
 }
 
