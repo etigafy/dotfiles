@@ -236,7 +236,7 @@
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "⚠  Disconnected",
-    "on-click": "alacritty --class=Impala -e impala"
+    "on-click": "nmgui"
   },
   "pulseaudio": {
     "format": "{icon}<span font='5'> {volume: >3}%</span>",
