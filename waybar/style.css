@@ -94,6 +94,7 @@ window#waybar {
 #memory,
 #disk,
 #idle_inhibitor,
+#custom-notification,
 #temperature,
 #custom-keyboard-layout,
 #backlight,
@@ -311,6 +312,12 @@ window#waybar.empty #window {
 
 #idle_inhibitor {
     background-color: #ebcb8b;
+    color: @base;
+    border-radius: 10px;
+}
+
+#custom-notification {
+	background-color: #ebcb8b;
     color: @base;
     border-radius: 10px;
 }

@@ -6,7 +6,7 @@
   "margin": "0 0 0 0",
   "modules-left": [
     "custom/launcher",
-    "sway/workspaces",
+    "hyprland/workspaces",
     "mpd#2",
     "mpd#3",
     "mpd#4",
@@ -26,7 +26,8 @@
     "group/hardware",
     "battery",
     "network",
-    "idle_inhibitor",
+	"custom/notification",
+    // "idle_inhibitor",
     "custom/power"
   ],
 

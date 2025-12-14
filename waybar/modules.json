@@ -1,10 +1,27 @@
 {
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{name}",
-    // "format": "< %g >",
-    // "format_focused" : "< %g ● >",
+"hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
   },
   "mpd": {
     "tooltip": true,
@@ -73,6 +90,27 @@
     "layer": "below",
     "output": "all"
   },
+  "custom/notification": {
+    "tooltip": true,
+    // "format": "<span size='16pt'>{icon}</span>",
+	"format": "{0} {icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
   },
@@ -93,7 +131,8 @@
     "format-icons": {
       "activated": "",
       "deactivated": ""
-    }
+    },
+	"on-click": "omarchy-lock-screen"
   },
   "tray": {
     // "icon-size": 14,
@@ -134,11 +173,11 @@
   },
   "cpu": {
     "format": " {usage: >3}%",
-    "on-click": "alacritty -e htop"
+    "on-click": "alacritty -e btop"
   },
   "memory": {
     "format": " {: >3}%",
-    "on-click": "alacritty -e htop"
+    "on-click": "alacritty -e btop"
   },
   "temperature": {
     "thermal-zone": 4,
@@ -208,7 +247,7 @@
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "⚠  Disconnected",
     // "on-click": "alacritty -e nmtui"
-    "on-click": "nm-connection-editor"
+    "on-click": "alacritty --class=Impala -e impala"
   },
   "pulseaudio": {
     // "scroll-step": 5,
@@ -224,7 +263,8 @@
       "car": "",
       "default": ["", ""]
     },
-    "on-click": "pavucontrol",
+    "on-click": "alacritty --class=Wiremix -e wiremix",
+    //"on-click": "pavucontrol",
     // "on-scroll-up": "pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob",
     // "on-scroll-down": "pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob"
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
@@ -240,7 +280,7 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "/usr/bin/python3 -sPE /usr/bin/blueman-manager",
+    "on-click": "alacritty --class=Bluetui -e bluetui",
   },
   "custom/pacman": {
     "format": " {}",

@@ -1,43 +1,21 @@
-
-[window]
-  decorations = "None"
-  padding = { x = 3, y = 3 }
-  dynamic_padding = true
-  blur = true
-
-
-[colors.primary]
-background = "#262626"
+general.import = [ "~/.config/omarchy/theme/alacritty.toml" ]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 14.0
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
+bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
+italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
+size = 14
 
-[font.bold]
-# family = "MesloLGS Nerd Font Mono"
-family = "CaskaydiaMono Nerd Font Mono"
-style = "Bold"
+[window]
+padding.x = 14
+padding.y = 14
+decorations = "None"
+opacity = 0.98
 
-[font.bold_italic]
-family = "CaskaydiaMono Nerd Font Mono"
-# family = "MesloLGS Nerd Font Mono"
-style = "Bold Italic"
-
-[font.italic]
-family = "CaskaydiaMono Nerd Font Mono"
-# family = "MesloLGS Nerd Font Mono"
-style = "Italic"
-
-[font.normal]
-# family = "MesloLGS Nerd Font Mono"
-family = "CaskaydiaMono Nerd Font Mono"
-style = "Regular"
-
-[general]
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-  #"~/.config/alacritty/catppuccin-latte.toml"
-  #"~/.config/alacritty/catppuccin-macchiato.toml"
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" }
 ]

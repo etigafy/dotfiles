@@ -7,7 +7,7 @@
   // Choose the order of the modules idle_inhibitor
   "modules-left": [
     "custom/launcher",
-    "sway/workspaces",
+    "hyprland/workspaces",
     "custom/swap",
     "tray",
     "sway/window",
