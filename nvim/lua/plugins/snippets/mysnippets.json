@@ -1,14 +1,13 @@
-
 {
-	"Log Function": {
-		"prefix": "loginfo",
-		"body": [ "logInfo(\"%s |8D| $1\", __func__);$0"],
-		"description": "Inserts printf with __func__"
-	},
+  "Log Function": {
+    "prefix": "loginfo",
+    "body": [ "logInfo(\"%s |8D| $1\", __func__);$0"],
+    "description": "Inserts printf with __func__"
+  },
 
-	"Doxygen Function Body" : {
-		"prefix": "doxfun",
-		"body": ["/**
+  "Doxygen Function Body" : {
+    "prefix": "doxfun",
+    "body": ["/**
  * foo_bar
  * @brief This function is used to differentiate foo from bar.
  *
@@ -22,26 +21,26 @@
  *
  * @return some really difficult things
  */" ],
-		"description" : "Insert Doxygen Function Body"
-	},
+    "description" : "Insert Doxygen Function Body"
+  },
 
-	"Doxygen Variable" : {
-		"prefix": "doxvar",
-		"body": ["/**< $1 */$0" ],
-		"description" : "Insert Doxygen variable description"
-	},
+  "Doxygen Variable" : {
+    "prefix": "doxvar",
+    "body": ["/**< $1 */$0" ],
+    "description" : "Insert Doxygen variable description"
+  },
 
-	"Doxygen Oneline Comment" : {
-		"prefix": "doxone",
-		"body": ["/// $1" ],
-		"description" : "Insert Doxygen oneline comment"
-	},
+  "Doxygen Oneline Comment" : {
+    "prefix": "doxone",
+    "body": ["/// $1" ],
+    "description" : "Insert Doxygen oneline comment"
+  },
 
-	"Doxygen Multiline Comment" : {
-		"prefix": "doxmulti",
-		"body": ["/** $1
+  "Doxygen Multiline Comment" : {
+    "prefix": "doxmulti",
+    "body": ["/** $1
  *
  * /$0" ],
-		"description" : "Insert Doxygen multiline comment"
-	}
+    "description" : "Insert Doxygen multiline comment"
+  }
 }

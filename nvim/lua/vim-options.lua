@@ -1,10 +1,8 @@
--- vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
--- vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=4")
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "c",
+	pattern = {"c", "h"},
 	callback = function()
 		vim.opt_local.tabstop = 8
 		vim.opt_local.shiftwidth = 8

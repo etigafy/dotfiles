@@ -13,6 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 -- Make sure to setup `mapleader` and `maplocalleader` before
@@ -43,8 +44,9 @@ vim.opt.listchars = {
 vim.opt.relativenumber = true
 vim.opt.cursorline = true       -- Highlight the current line
 vim.opt.cursorlineopt = "number"
-vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#3EFC14", bold = true })
 
 require("vim-options")
 require("lazy").setup("plugins")
 
+
+vim.cmd.colorscheme("tokyonight")
