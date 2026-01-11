@@ -1,6 +1,10 @@
 vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 
+-- Clear highlights on search when pressing <Esc> in normal mode
+--  See `:help hlsearch`
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {"c", "h"},
 	callback = function()

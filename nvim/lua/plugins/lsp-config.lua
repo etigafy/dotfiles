@@ -19,11 +19,17 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()  
-      local lspconfig = require("lspconfig")
+      -- local lspconfig = require("lspconfig")
 
-      lspconfig.clangd.setup({
+      --lspconfig.clangd.setup({
+      --  cmd = { "clangd", "--background-index", "--clang-tidy", "--header-insertion=never" },
+      --  capabilities = require('cmp_nvim_lsp').default_capabilities()
+      --})
+      vim.lsp.enable('clangd')
+
+      vim.lsp.config('clangd', {
         cmd = { "clangd", "--background-index", "--clang-tidy", "--header-insertion=never" },
-        capabilities = require('cmp_nvim_lsp').default_capabilities()
+        capabilities = capabilities
       })
 
       vim.diagnostic.config({
