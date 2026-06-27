@@ -1,7 +1,5 @@
 vim.opt.clipboard:append("unnamedplus")
 
-vim.opt.confirm = true
-
 vim.opt.undofile = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
