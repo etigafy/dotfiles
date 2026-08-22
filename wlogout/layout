@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "omarchy-lock-screen",
+    "action" : "/home/chris/.local/bin/swaylock-fancy -e -K -p 10 -f CaskaydiaMono-NF-Regular",
     "text" : "Lock",
     "keybind" : "l"
 }

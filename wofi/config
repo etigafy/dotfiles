@@ -1,0 +1,7 @@
+show=drun
+allow_images=true
+image_size=28
+insensitive=true
+prompt=Search
+width=900
+lines=8
