@@ -1,0 +1,9 @@
+[Unit]
+Description=Hyprland compositor session
+Documentation=man:systemd.special(7)
+# graphical-session.target refuses manual start, so bind to it from here.
+# greetd (unlike GDM) does not start it, and without it xdg-desktop-portal
+# and other graphical-session units (dcal) never come up.
+BindsTo=graphical-session.target
+Wants=graphical-session-pre.target
+After=graphical-session-pre.target
