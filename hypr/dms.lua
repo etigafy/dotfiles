@@ -25,6 +25,10 @@ require("dms.windowrules")
 
 common.autostart({
     "pkill -x swaync; pkill -x mako; pkill -x waybar; pkill -x hyprpaper; pkill -x hypridle; pkill -f '[p]olkit-mate-authentication-agent'; dms run",
+    -- dcal's unit is disabled (not WantedBy graphical-session.target) so it
+    -- doesn't compete with DMS for CPU while DMS loads; PartOf= still stops
+    -- it on logout.
+    "sleep 8 && systemctl --user start dcal",
 })
 
 hl.bind(mainMod .. " + R",       hl.dsp.exec_cmd("dms ipc call spotlight toggle"),     { description = "App launcher" })
