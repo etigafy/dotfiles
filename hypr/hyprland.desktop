@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Hyprland
+Comment=An intelligent dynamic tiling Wayland compositor
+# Same file name as the package's /usr/share/wayland-sessions/hyprland.desktop
+# so this copy in /usr/local/share overrides it. systemd-cat sends the log
+# output to the journal instead of tty1, where greetd would show it.
+Exec=/usr/bin/systemd-cat -t hyprland /usr/bin/start-hyprland
+Type=Application
+DesktopNames=Hyprland
+Keywords=tiling;wayland;compositor;
