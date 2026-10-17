@@ -20,15 +20,22 @@
 /* Reset all styles */
 
 * {
-    color: @lavender;
     border: 0;
     padding: 0 0;
     font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Set the default color once and let it inherit, so each module's own
+ * color reaches its inner label (waybar 0.15 wraps labels in a box). */
 window#waybar {
+    color: @lavender;
     border: 0px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
+}
+
+/* Tooltips are separate windows and do not inherit from window#waybar */
+tooltip * {
+    color: @lavender;
 }
 
 #workspaces button {
@@ -102,6 +109,7 @@ window#waybar {
 #network,
 #pulseaudio,
 #bluetooth,
+#power-profiles-daemon,
 #mode,
 #window,
 #tray,
@@ -210,6 +218,24 @@ window#waybar.empty #window {
     /* border-bottom: 2px solid @flamingo; */
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
+}
+
+#power-profiles-daemon {
+    color: @green;
+    /* mid-segment of the temperature|hardware|ppd|battery pill: no radius, no gap */
+    border-radius: 0;
+}
+
+#power-profiles-daemon.balanced {
+    color: @green;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @teal;
+}
+
+#power-profiles-daemon.performance {
+    color: @peach;
 }
 
 #custom-keyboard-layout {
