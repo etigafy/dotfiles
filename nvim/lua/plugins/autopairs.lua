@@ -1,9 +1,8 @@
-return {
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    config = true
-    -- use opts = {} for passing setup options
-    -- this is equivalent to setup({}) function
-  },
-}
+local defer = require("config.defer")
+
+return function()
+  -- was: event = "InsertEnter"
+  defer.on("InsertEnter", function()
+    require("nvim-autopairs").setup({})
+  end)
+end

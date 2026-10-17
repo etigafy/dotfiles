@@ -24,7 +24,6 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 
-vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>z', '<cmd>undo<CR>', {noremap = true, silent = true})
 
 -- VIM Tab settings
