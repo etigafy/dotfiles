@@ -37,7 +37,6 @@ return function()
     vim.keymap.set(mode, lhs, rhs, opts)
   end
 
-  map("n", "<leader>sn", "", { desc = "+noice" })
   map("c", "<S-Enter>", function()
     require("noice").redirect(vim.fn.getcmdline())
   end, { desc = "Redirect Cmdline" })

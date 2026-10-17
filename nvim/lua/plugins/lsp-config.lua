@@ -25,10 +25,12 @@ return function()
 
   vim.diagnostic.config({ virtual_text = false })
 
-  local opts = { noremap = true, silent = true }
-  vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "<leader>j", vim.lsp.buf.definition, opts)
-  vim.keymap.set("n", "<leader>b", "<C-o>", opts)
-  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+  local function map(lhs, rhs, desc)
+    vim.keymap.set("n", lhs, rhs, { noremap = true, silent = true, desc = desc })
+  end
+  map("<leader>e", vim.diagnostic.open_float, "Diagnostics (float)")
+  map("K", vim.lsp.buf.hover, "Hover")
+  map("<leader>j", vim.lsp.buf.definition, "Go to definition")
+  map("<leader>b", "<C-o>", "Jump back")
+  map("<leader>ca", vim.lsp.buf.code_action, "Code action")
 end

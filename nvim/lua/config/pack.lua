@@ -99,6 +99,13 @@ vim.pack.add({
   { src = gh("folke/noice.nvim") },
   { src = gh("goolord/alpha-nvim") },
 
+  -- Todo lists in markdown
+  { src = gh("bngarren/checkmate.nvim"), version = "v0.12.1" },
+
+  -- Keymap discoverability + formatting
+  { src = gh("folke/which-key.nvim"), version = "v3.17.0" },
+  { src = gh("stevearc/conform.nvim"), version = "v9.1.0" },
+
   -- Editing
   { src = gh("windwp/nvim-autopairs") },
   { src = gh("karb94/neoscroll.nvim") },
@@ -120,6 +127,9 @@ for _, mod in ipairs({
   "noice",
   "autopairs",
   "blame",
+  "conform",
+  "checkmate",
+  "which-key",
 }) do
   local ok, err = pcall(require("plugins." .. mod))
   if not ok then

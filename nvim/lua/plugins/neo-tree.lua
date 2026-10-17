@@ -3,8 +3,10 @@ local defer = require("config.defer")
 return function()
   -- Keymaps are bound eagerly so they work from the very first keypress;
   -- neo-tree's own setup is deferred until after startup.
-  vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", { noremap = true, silent = true })
-  vim.keymap.set("n", "<C-d>", ":Neotree close<CR>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>",
+    { noremap = true, silent = true, desc = "Explorer (reveal file)" })
+  vim.keymap.set("n", "<C-d>", ":Neotree close<CR>",
+    { noremap = true, silent = true, desc = "Explorer close" })
 
   -- Open the tree automatically when nvim is started on a directory.
   vim.api.nvim_create_autocmd("BufEnter", {

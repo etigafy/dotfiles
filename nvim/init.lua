@@ -10,4 +10,5 @@ vim.g.maplocalleader = " "
 
 require("config.options")
 require("config.keymaps")
+require("config.numbase")
 require("config.pack")
